@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.witxsalon.ui.home.HomeFragment"
+        android:label="Shop"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_sell"
+        android:name="com.example.witxsalon.ui.sell.SellFragment"
+        android:label="Admin"
+        tools:layout="@layout/fragment_sell" />
+
+    <fragment
+        android:id="@+id/nav_appointments"
+        android:name="com.example.witxsalon.ui.appointments.Appointments"
+        android:label="Appointments"
+        tools:layout="@layout/fragment_appointments" />
+
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.example.witxsalon.ui.cart.cartFragment"
+        android:label="cart"
+        tools:layout="@layout/fragment_cart" />
+</navigation>

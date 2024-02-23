@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/productImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+
+/>
+
+    <TextView
+        android:id="@+id/TVname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productImageView"
+        android:gravity="center"
+        android:padding="4dp"
+        android:textColor="@color/white"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/TVdescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TVname"
+        android:gravity="center"
+        android:padding="4dp"
+        android:textColor="@color/white"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/TVprice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TVdescription"
+        android:gravity="center"
+        android:padding="4dp"
+        android:textColor="@color/white"
+        android:textAlignment="center" />
+</RelativeLayout>

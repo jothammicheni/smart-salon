@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/screen_bg"
+        android:gravity="center"
+
+        >
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login here"
+                android:textColor="@color/white"
+                android:layout_margin="20dp"
+                android:textSize="30dp"
+                android:textAlignment="center"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/logo"
+
+                />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="@color/white"
+                android:layout_marginTop="20sp"
+                android:hint="johndoe@gmail.com"
+                android:textAlignment="center"
+                android:drawableStart="@drawable/signup_email_24"
+                />
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="@color/white"
+                android:layout_marginTop="20sp"
+                android:hint="johndoe@gmail.com"
+                android:textAlignment="center"
+                android:drawableStart="@drawable/signup_password_24"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/back_to_signup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Have account? sign up"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    />
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/black"
+                    android:text="Login"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

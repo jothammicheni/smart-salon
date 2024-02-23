@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adminTasks.AddNewProduct">
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/RLaddnewitems"
+        android:padding="16dp">
+
+        <!-- Product Name -->
+        <EditText
+            android:id="@+id/editTextProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product Name"/>
+
+        <!-- Product Category (Dropdown) -->
+        <Spinner
+            android:id="@+id/spinnerProductCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Select Category"
+            app:layout_constraintTop_toBottomOf="@id/editTextProductName"
+            tools:listitem="@android:layout/simple_spinner_dropdown_item"/>
+
+        <!-- Product Price -->
+        <EditText
+            android:id="@+id/editTextProductPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Product Price"
+            android:inputType="numberDecimal"/>
+
+        <!-- Product Description -->
+        <EditText
+            android:id="@+id/editTextProductDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Product Description"
+            android:inputType="textMultiLine"/>
+
+        <!-- Image Upload -->
+        <Button
+            android:id="@+id/btnUploadImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Upload Image"/>
+
+        <!-- Add more widgets as needed -->
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnSubmitProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Submit Product"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
