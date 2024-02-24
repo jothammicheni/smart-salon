@@ -41,7 +41,8 @@
                 android:layout_height="50sp"
                 android:background="@color/white"
                 android:layout_marginTop="20sp"
-                android:hint="johndoe@gmail.com"
+                android:textColor="@color/black"
+                android:hint="johndoe@gm ail.com"
                 android:textAlignment="center"
                 android:drawableStart="@drawable/signup_email_24"
                 />
@@ -50,6 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
                 android:background="@color/white"
+                android:textColor="@color/black"
                 android:layout_marginTop="20sp"
                 android:hint="johndoe@gmail.com"
                 android:textAlignment="center"
@@ -81,6 +83,15 @@
                     android:textColor="@color/white"
                     />
             </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/PBprogress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/black"
+                android:visibility="gone"
+                />
         </LinearLayout>
 
     </RelativeLayout>

@@ -53,12 +53,18 @@
             android:inputType="textMultiLine"/>
 
         <!-- Image Upload -->
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
         <Button
             android:id="@+id/btnUploadImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Upload Image"/>
+            android:text="select Image"/>
 
         <!-- Add more widgets as needed -->
 
@@ -68,7 +74,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Submit Product"/>
+            android:visibility="gone"
+            android:text="upload product"/>
 
     </LinearLayout>
 
