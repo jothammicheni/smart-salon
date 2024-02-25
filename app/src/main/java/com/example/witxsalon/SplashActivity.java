@@ -25,7 +25,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Navigate to the SignupActivity or replace it with your desired destination
-                startActivity(new Intent(SplashActivity.this, AdminPanel.class));
+                startActivity(new Intent(SplashActivity.this,login.class));
                 finish(); // Optional: close the SplashActivity to prevent going back
             }
         });

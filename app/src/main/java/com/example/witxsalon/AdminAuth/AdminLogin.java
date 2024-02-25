@@ -29,7 +29,7 @@ Button loginButton;
              @Override
              public void onClick(View view) {
                  Log.d("state","clicked");
-                 Intent intent = new Intent(AdminLogin.this, MainActivity.class);
+                 Intent intent = new Intent(AdminLogin.this, AdminPanel.class);
                  startActivity(intent);
 
                  Toast.makeText(AdminLogin.this, "logged in to admin pannel", Toast.LENGTH_SHORT).show();

@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/screen_bg"
+        android:background="@color/white"
         android:gravity="center"
 
         >
@@ -23,9 +23,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Login here"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:layout_margin="20dp"
-                android:textSize="30dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
                 android:textAlignment="center"
                 />
             <ImageView
@@ -39,10 +40,10 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
-                android:background="@color/white"
                 android:layout_marginTop="20sp"
                 android:textColor="@color/black"
-                android:hint="johndoe@gm ail.com"
+                android:hint="johndoe@gmail.com"
+                android:inputType="textEmailAddress"
                 android:textAlignment="center"
                 android:drawableStart="@drawable/signup_email_24"
                 />
@@ -50,10 +51,10 @@
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
-                android:background="@color/white"
                 android:textColor="@color/black"
+                android:inputType="textPassword"
                 android:layout_marginTop="20sp"
-                android:hint="johndoe@gmail.com"
+                android:hint="fg84hggrty34"
                 android:textAlignment="center"
                 android:drawableStart="@drawable/signup_password_24"
                 />
@@ -69,7 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Have account? sign up"
-                    android:textColor="@color/white"
+                    android:textColor="@color/purple_700"
                     android:layout_marginRight="10dp"
                     android:textStyle="bold"
                     />

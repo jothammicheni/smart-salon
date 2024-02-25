@@ -42,7 +42,7 @@ private FirebaseAuth mAuth;
                   // LoginUser();
 //               Intent intent=new Intent(getApplicationContext(),MainActivity.class);
 //               startActivity(intent);
-                Intent intent=new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent=new Intent(getApplicationContext(), AdminPanel.class);
                 startActivity(intent);
 
             }

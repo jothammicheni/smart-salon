@@ -10,7 +10,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/screen_bg"
+        android:background="@color/white"
         android:gravity="center"
 
         >
@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Sign up here"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:layout_margin="20dp"
                 android:textSize="30dp"
                 android:textAlignment="center"
@@ -39,10 +39,10 @@
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
-                android:background="@color/white"
                 android:textColor="@color/black"
                 android:layout_marginTop="20sp"
                 android:hint="john doe"
+                android:inputType="text"
                 android:textAlignment="center"
                 android:drawableStart="@drawable/signup_person_24"
                 />
@@ -50,7 +50,7 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
-                android:background="@color/white"
+                android:inputType="textEmailAddress"
                 android:textColor="@color/black"
                 android:layout_marginTop="20sp"
                 android:hint="johndoe@gmail.com"
@@ -61,9 +61,9 @@
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
-                android:background="@color/white"
                 android:layout_marginTop="20sp"
                 android:textColor="@color/black"
+                android:inputType="textPassword"
                 android:hint="johndoe@gmail.com"
                 android:textAlignment="center"
                 android:drawableStart="@drawable/signup_password_24"
@@ -80,7 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Have account? Login"
-                    android:textColor="@color/white"
+                    android:textColor="@color/purple_700"
                     android:layout_marginRight="20dp"
                     android:textStyle="bold"
                     />
