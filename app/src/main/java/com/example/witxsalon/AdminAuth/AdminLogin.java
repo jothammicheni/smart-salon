@@ -10,8 +10,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.witxsalon.MainActivity;
 import com.example.witxsalon.R;
 import com.example.witxsalon.adminTasks.AddNewProduct;
+import com.example.witxsalon.adminTasks.AdminPanel;
 
 public class AdminLogin extends AppCompatActivity {
 
@@ -27,10 +29,10 @@ Button loginButton;
              @Override
              public void onClick(View view) {
                  Log.d("state","clicked");
-                 Intent intent = new Intent(AdminLogin.this, AddNewProduct.class);
+                 Intent intent = new Intent(AdminLogin.this, MainActivity.class);
                  startActivity(intent);
 
-                 Toast.makeText(AdminLogin.this, "logged in", Toast.LENGTH_SHORT).show();
+                 Toast.makeText(AdminLogin.this, "logged in to admin pannel", Toast.LENGTH_SHORT).show();
              }
 
 

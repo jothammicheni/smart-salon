@@ -28,11 +28,10 @@ public class AddNewProduct extends AppCompatActivity implements AdapterView.OnIt
  Spinner  categorySpinner;
  Button btnSelectImage,btnUploadProduct;
  ImageView imageView;
- String[] categories={"Long","short","Medium"};
+ String[] categories={"Long","short","Medium","yellow","Red","Brazilian"};
  private Uri filePath;
  private ActivityResultLauncher<String>  pickImageLauncher;
  private final int PICK_IMAGE_REQUEST=22;
-
    FirebaseStorage storage;
    StorageReference   storageReference;
     @Override
@@ -63,37 +62,29 @@ public class AddNewProduct extends AppCompatActivity implements AdapterView.OnIt
 
         // button to uplaod the image
 
-        ActionBar actionBar;
-        actionBar = getSupportActionBar();
-        ColorDrawable colorDrawable
-                = new ColorDrawable(
-                Color.parseColor("#0F9D58"));
-        actionBar.setBackgroundDrawable(colorDrawable);
-
         // get the Firebase  storage reference
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
 
         //select image from gallary
+
+        pickImageLauncher=registerForActivityResult(new ActivityResultContracts.GetContent(),results->{
+            if(results!=null){
+                imageView.setImageURI(results);
+                btnUploadProduct.setVisibility(View.VISIBLE);
+                btnSelectImage.setVisibility(View.GONE);
+
+            }
+            else {
+                Toast.makeText(AddNewProduct.this, "No image found", Toast.LENGTH_SHORT).show();
+
+            }
+
+        });
         btnSelectImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                 pickImageLauncher=registerForActivityResult(new ActivityResultContracts.GetContent(),results->{
-                     if(results!=null){
-                         imageView.setImageURI(results);
-                         btnUploadProduct.setVisibility(View.VISIBLE);
-                         btnSelectImage.setVisibility(View.GONE);
-
-                     }
-                     else {
-                         Toast.makeText(AddNewProduct.this, "No image found", Toast.LENGTH_SHORT).show();
-
-                     }
-
-                 });
-
-
-                Uploadmage();
+                    Uploadmage();
             }
         });
 

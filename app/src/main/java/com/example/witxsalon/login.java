@@ -12,6 +12,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.witxsalon.adminTasks.AddNewProduct;
+import com.example.witxsalon.adminTasks.AdminPanel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -38,8 +40,10 @@ private FirebaseAuth mAuth;
             public void onClick(View view) {
 
                   // LoginUser();
-               Intent intent=new Intent(getApplicationContext(),MainActivity.class);
-               startActivity(intent);
+//               Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+//               startActivity(intent);
+                Intent intent=new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
 
             }
         });

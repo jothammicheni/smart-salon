@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.witxsalon.adminTasks.AdminPanel;
+
 public class SplashActivity extends AppCompatActivity {
 
     private Button btnSignUp;
@@ -23,7 +25,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Navigate to the SignupActivity or replace it with your desired destination
-                startActivity(new Intent(SplashActivity.this,login.class));
+                startActivity(new Intent(SplashActivity.this, AdminPanel.class));
                 finish(); // Optional: close the SplashActivity to prevent going back
             }
         });
