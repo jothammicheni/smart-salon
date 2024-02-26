@@ -39,10 +39,10 @@ private FirebaseAuth mAuth;
             @Override
             public void onClick(View view) {
 
-                  // LoginUser();
+                 // LoginUser();
 //               Intent intent=new Intent(getApplicationContext(),MainActivity.class);
 //               startActivity(intent);
-                Intent intent=new Intent(getApplicationContext(), AdminPanel.class);
+                Intent intent=new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
 
             }
@@ -72,16 +72,18 @@ private FirebaseAuth mAuth;
         }
 
         //sign in the user
-
+        setprogressBar.setVisibility(View.VISIBLE);
         mAuth.signInWithEmailAndPassword(email,password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                          if(task.isSuccessful()){
-                             setprogressBar.setVisibility(View.VISIBLE);
-
+                             Intent intent=new Intent(getApplicationContext(), MainActivity.class);
+                             startActivity(intent);
                              Toast.makeText(login.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
+
+                             setprogressBar.setVisibility(View.GONE);
                          }
                          else {
                              //   Toast.makeText(login.this, "Error Logging in", Toast.LENGTH_SHORT).show();

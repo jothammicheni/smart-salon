@@ -7,17 +7,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.witxsalon.ProductReview;
-//import com.squareup.picasso.Picasso; // Add Picasso library for image loading
+import com.example.witxsalon.data.ProductInfo;
+import com.squareup.picasso.Picasso; // Import Picasso library for image loading
 import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
 
-    private List<ProductReview> productReviewList;
+    private List<ProductInfo> productInfoList;
 
-    public ProductAdapter(List<ProductReview> productReviewList) {
-        this.productReviewList = productReviewList;
+    public ProductAdapter(List<ProductInfo> productInfoList) {
+        this.productInfoList = productInfoList;
     }
 
     @NonNull
@@ -29,20 +28,20 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ProductReview productReview = productReviewList.get(position);
+        ProductInfo productInfo = productInfoList.get(position);
 
         // Load product image using Picasso
-     //   Picasso.get().load(productReview.getImageUrl()).placeholder(R.drawable.placeholder_image).into(holder.productImageView);
+        Picasso.get().load(productInfo.getImageUrl()).placeholder(R.drawable.ic_menu_camera).into(holder.productImageView);
 
-        // Set other views
-        holder.tvName.setText(productReview.getName());
-        holder.tvDescription.setText(productReview.getDescription());
-        holder.tvPrice.setText(productReview.getPrice());
+        holder.tvName.setText(productInfo.getProductName());
+        holder.tvDescription.setText(productInfo.getProductDescription());
+        holder.tvPrice.setText(productInfo.getProductPrice());
+        holder.tvCategory.setText(productInfo.getProductCategory());
     }
 
     @Override
     public int getItemCount() {
-        return productReviewList.size();
+        return productInfoList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -50,6 +49,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         private TextView tvName;
         private TextView tvDescription;
         private TextView tvPrice;
+        private TextView tvCategory;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -57,6 +57,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             tvName = itemView.findViewById(R.id.TVname);
             tvDescription = itemView.findViewById(R.id.TVdescription);
             tvPrice = itemView.findViewById(R.id.TVprice);
+            tvCategory = itemView.findViewById(R.id.TVcategory);
         }
     }
 }

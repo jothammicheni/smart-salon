@@ -19,7 +19,17 @@
         android:layout_below="@id/productImageView"
         android:gravity="center"
         android:padding="4dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/TVcategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productImageView"
+        android:gravity="center"
+        android:padding="4dp"
+        android:textColor="@color/black"
         android:textAlignment="center" />
 
     <TextView
@@ -29,7 +39,7 @@
         android:layout_below="@id/TVname"
         android:gravity="center"
         android:padding="4dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textAlignment="center" />
 
     <TextView
@@ -39,6 +49,6 @@
         android:layout_below="@id/TVdescription"
         android:gravity="center"
         android:padding="4dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textAlignment="center" />
 </RelativeLayout>

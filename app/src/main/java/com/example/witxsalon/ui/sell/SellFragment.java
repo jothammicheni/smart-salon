@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.example.witxsalon.AdminAuth.AdminLogin;
 import com.example.witxsalon.R;
 import com.example.witxsalon.adminTasks.AddNewProduct;
+import com.example.witxsalon.adminTasks.AdminPanel;
 import com.example.witxsalon.databinding.FragmentHomeBinding;
 import com.example.witxsalon.databinding.FragmentSellBinding;
 import com.example.witxsalon.ui.home.HomeViewModel;
@@ -53,7 +54,7 @@ public class SellFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Log.d("state","clicked");
-                Intent intent = new Intent(requireContext(), AddNewProduct.class);                startActivity(intent);
+                Intent intent = new Intent(requireContext(), AdminPanel.class);                startActivity(intent);
 
                 Toast.makeText(requireContext(), "logged in", Toast.LENGTH_SHORT).show();
             }

@@ -1,43 +1,71 @@
 package com.example.witxsalon.data;
 
 public class ProductInfo {
-    String name;
-    String price;
-    String Description;
-    String category;
+    private String productId;
+    private String productName;
+    private String productCategory;
+    private String productPrice;
+    private String productDescription;
+    private String imageUrl;
 
-    public ProductInfo() {
+
+    public ProductInfo(){
     }
 
-    public String getName() {
-        return name;
+    public ProductInfo(String productId, String productName, String productCategory, String productPrice, String productDescription, String imageUrl) {
+        this.productId = productId;
+        this.productName = productName;
+        this.productCategory = productCategory;
+        this.productPrice = productPrice;
+        this.productDescription = productDescription;
+        this.imageUrl = imageUrl;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getProductId() {
+        return productId;
     }
 
-    public String getPrice() {
-        return price;
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
+    public String getProductName() {
+        return productName;
     }
 
-    public String getDescription() {
-        return Description;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    public void setDescription(String description) {
-        Description = description;
+    public String getProductCategory() {
+        return productCategory;
     }
 
-    public String getCategory() {
-        return category;
+    public void setProductCategory(String productCategory) {
+        this.productCategory = productCategory;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public String getProductPrice() {
+        return productPrice;
+    }
+
+    public void setProductPrice(String productPrice) {
+        this.productPrice = productPrice;
+    }
+
+    public String getProductDescription() {
+        return productDescription;
+    }
+
+    public void setProductDescription(String productDescription) {
+        this.productDescription = productDescription;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }
