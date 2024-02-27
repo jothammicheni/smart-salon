@@ -67,4 +67,5 @@
     <string name="title_activity_register">Register</string>
     <string name="title_activity_admin_login">AdminLogin</string>
     <string name="title_activity_admin_panel">AdminPanel</string>
+    <string name="title_activity_display_item_objects">DisplayItemObjects</string>
 </resources>

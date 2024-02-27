@@ -39,11 +39,10 @@ private FirebaseAuth mAuth;
             @Override
             public void onClick(View view) {
 
-                 // LoginUser();
-//               Intent intent=new Intent(getApplicationContext(),MainActivity.class);
-//               startActivity(intent);
-                Intent intent=new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
+                //LoginUser();
+               Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+               startActivity(intent);
+
 
             }
         });

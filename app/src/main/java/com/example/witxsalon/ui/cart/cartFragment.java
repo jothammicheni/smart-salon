@@ -30,8 +30,7 @@ public class cartFragment extends Fragment {
         binding = FragmentCartBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textCart;
-        cartViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
         return root;
     }
 

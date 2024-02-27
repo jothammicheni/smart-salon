@@ -16,6 +16,11 @@
         android:theme="@style/Theme.WitxSalon"
         tools:targetApi="31">
         <activity
+            android:name=".DisplayItemObjects"
+            android:exported="false"
+            android:label="@string/title_activity_display_item_objects"
+            android:theme="@style/Theme.WitxSalon" />
+        <activity
             android:name=".adminTasks.AdminPanel"
             android:exported="false"
             android:label="@string/title_activity_admin_panel"
@@ -32,19 +37,16 @@
             android:name=".Register"
             android:exported="false"
             android:label="@string/title_activity_register"
-            android:theme="@style/Theme.WitxSalon" />
-<!--        <activity-->
-<!--            android:name=".ui.login.Register"-->
-<!--            android:exported="false"-->
-<!--            android:label="@string/title_activity_register" />-->
-
+            android:theme="@style/Theme.WitxSalon" /> <!-- <activity -->
+        <!-- android:name=".ui.login.Register" -->
+        <!-- android:exported="false" -->
+        <!-- android:label="@string/title_activity_register" /> -->
         <activity
             android:name=".login"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".ui.login.login"-->
-<!--            android:exported="false"-->
-<!--            android:label="@string/title_activity_login" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".ui.login.login" -->
+        <!-- android:exported="false" -->
+        <!-- android:label="@string/title_activity_login" /> -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">

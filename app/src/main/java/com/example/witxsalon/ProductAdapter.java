@@ -19,6 +19,20 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         this.productInfoList = productInfoList;
     }
 
+
+    //initialize the click listener
+
+    private OnItemClickListener onItemClickListener;
+
+    public interface OnItemClickListener {
+        void onItemClick(ProductInfo productInfo);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.onItemClickListener = listener;
+    }
+
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -31,12 +45,22 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         ProductInfo productInfo = productInfoList.get(position);
 
         // Load product image using Picasso
-        Picasso.get().load(productInfo.getImageUrl()).placeholder(R.drawable.ic_menu_camera).into(holder.productImageView);
+        Picasso.get().load(productInfo.getImageUrl()).into(holder.productImageView);
 
         holder.tvName.setText(productInfo.getProductName());
         holder.tvDescription.setText(productInfo.getProductDescription());
         holder.tvPrice.setText(productInfo.getProductPrice());
         holder.tvCategory.setText(productInfo.getProductCategory());
+
+        ////handle a single item click
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (onItemClickListener != null) {
+                    onItemClickListener.onItemClick(productInfo);
+                }
+            }
+        });
     }
 
     @Override
@@ -58,6 +82,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             tvDescription = itemView.findViewById(R.id.TVdescription);
             tvPrice = itemView.findViewById(R.id.TVprice);
             tvCategory = itemView.findViewById(R.id.TVcategory);
+
+
+
         }
     }
 }
+
