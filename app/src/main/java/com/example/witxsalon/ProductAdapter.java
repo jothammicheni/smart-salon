@@ -3,6 +3,7 @@ package com.example.witxsalon;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -61,6 +62,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
                 }
             }
         });
+
+        holder.btnViewItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(onItemClickListener !=null){
+                    onItemClickListener.onItemClick(productInfo);
+                }
+            }
+        });
     }
 
     @Override
@@ -74,6 +84,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         private TextView tvDescription;
         private TextView tvPrice;
         private TextView tvCategory;
+        private Button btnViewItem;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -82,7 +93,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             tvDescription = itemView.findViewById(R.id.TVdescription);
             tvPrice = itemView.findViewById(R.id.TVprice);
             tvCategory = itemView.findViewById(R.id.TVcategory);
-
+          btnViewItem=itemView.findViewById(R.id.btnViewItem);
 
 
         }

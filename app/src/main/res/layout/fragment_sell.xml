@@ -9,7 +9,7 @@
         android:id="@+id/RLadminlogins"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/screen_bg"
+        android:background="@color/white"
         android:gravity="center"
 
         >
@@ -24,9 +24,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Admin logins"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:layout_margin="20dp"
                 android:textSize="30dp"
+                android:textStyle="bold"
                 android:textAlignment="center"
                 />
             <ImageView
@@ -40,7 +41,6 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
-                android:background="@color/white"
                 android:layout_marginTop="20sp"
                 android:hint="admin@gmail.com"
                 android:textAlignment="center"
@@ -50,7 +50,6 @@
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
-                android:background="@color/white"
                 android:layout_marginTop="20sp"
                 android:inputType="textWebPassword"
                 android:hint="i2345"
@@ -69,7 +68,7 @@
                     android:id="@+id/btn_login"
                     android:layout_width="fill_parent"
                     android:layout_height="50dp"
-                    android:backgroundTint="@color/black"
+                    android:backgroundTint="@color/purple_700"
                     android:text="Login"
                     android:textStyle="bold"
                     android:textColor="@color/white"

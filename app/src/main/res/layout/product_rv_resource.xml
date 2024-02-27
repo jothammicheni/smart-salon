@@ -65,6 +65,7 @@
         android:textAlignment="center" />
 
        <Button
+           android:id="@+id/btnViewItem"
            android:layout_width="100dp"
            android:layout_height="50dp"
            android:backgroundTint="@color/purple_700"

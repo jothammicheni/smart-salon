@@ -64,7 +64,7 @@
                 android:layout_marginTop="20sp"
                 android:textColor="@color/black"
                 android:inputType="textPassword"
-                android:hint="johndoe@gmail.com"
+                android:hint="#dfdwfgdtyq'"
                 android:textAlignment="center"
                 android:drawableStart="@drawable/signup_password_24"
                 />
@@ -88,7 +88,7 @@
                     android:id="@+id/btn_signup"
                     android:layout_width="fill_parent"
                     android:layout_height="50dp"
-                    android:backgroundTint="@color/black"
+                    android:backgroundTint="@color/purple_700"
                     android:text="Sign up"
                     android:textStyle="bold"
                     android:textColor="@color/white"

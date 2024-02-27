@@ -3,11 +3,44 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+
+    <LinearLayout
+        android:id="@+id/TVcartdesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Your Cart Details"
+            android:textSize="20dp"
+            android:textStyle="bold"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cost : 0.00"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"
+
+            />
+
+
+
+
+
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
+        android:layout_below="@+id/TVcartdesc"
         android:background="@color/shandow"
         android:layout_margin="10dp">
 
@@ -49,6 +82,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="4dp"
+                android:textSize="15dp"
                 android:textColor="@color/black"
                 android:textAlignment="center" />
 

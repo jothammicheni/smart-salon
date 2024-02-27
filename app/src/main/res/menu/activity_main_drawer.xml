@@ -9,6 +9,10 @@
             android:icon="@drawable/home"
             android:title="shop" />
         <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/cart"
+            android:title="cart" />
+        <item
             android:id="@+id/nav_sell"
             android:icon="@drawable/home"
             android:title="Admin" />
@@ -18,9 +22,6 @@
             android:id="@+id/nav_apointments"
             android:icon="@drawable/appointment"
             android:title="book appointments" />
-        <item
-            android:id="@+id/nav_cart"
-            android:icon="@drawable/cart"
-            android:title="cart" />
+
     </group>
 </menu>
