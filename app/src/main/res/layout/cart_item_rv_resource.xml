@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/shandow"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/productImageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TVname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/TVcategory"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/TVprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:textAlignment="center"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/purple_700"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="-" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:textAlignment="center"
+                    android:text="1" />
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/purple_700"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="*" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/TVdescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone"
+                android:padding="4dp"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/btnDel"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/red"
+                android:text="DEL" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
