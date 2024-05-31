@@ -5,11 +5,75 @@
     android:layout_height="match_parent"
     tools:context=".ui.cart.cartFragment">
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RVcartRecyclerView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
 
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:id="@+id/TVcartdesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/TVcostDesc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cost"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/TVtotalcost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cost: 0.00"
+                    android:textAlignment="textEnd"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                   android:layout_marginRight="30dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:id="@+id/btnMpesa"
+                    android:textStyle="bold"
+                    android:text="PAY BILL"
+                    android:background="@drawable/buttonbackground"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="5dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/TVcartDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Items in cart"
+                android:textAlignment="center"
+                android:visibility="gone"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RVcartRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
 </FrameLayout>
