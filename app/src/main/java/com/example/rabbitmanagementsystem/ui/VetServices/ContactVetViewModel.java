@@ -1,4 +1,4 @@
-package com.example.witxsalon.ui.appointments;
+package com.example.rabbitmanagementsystem.ui.appointments;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
