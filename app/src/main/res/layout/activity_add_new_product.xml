@@ -13,10 +13,11 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:orientation="vertical"
         android:id="@+id/RLaddnewitems"
         android:padding="16dp"
-        android:background="@color/white"
+        android:background="@color/background_color"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -25,6 +26,7 @@
             android:text="Enter Product details"
             android:textStyle="bold"
             android:textAlignment="center"
+            android:textColor="@color/status_bar_color"
             android:textSize="25dp"
             android:layout_margin="10dp"
 
@@ -35,16 +37,18 @@
         <EditText
             android:id="@+id/editTextProductName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:background="@drawable/edittextbackgroud"
             android:hint="Product Name"/>
 
         <!-- Product Category (Dropdown) -->
         <Spinner
             android:id="@+id/spinnerProductCategory"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="Select Category"
+            android:layout_height="50dp"
+            android:background="@drawable/edittextbackgroud"
             app:layout_constraintTop_toBottomOf="@id/editTextProductName"
             tools:listitem="@android:layout/simple_spinner_dropdown_item"/>
 
@@ -52,8 +56,9 @@
         <EditText
             android:id="@+id/editTextProductPrice"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edittextbackgroud"
             android:hint="Product Price"
             android:inputType="numberDecimal"/>
 
@@ -61,9 +66,10 @@
         <EditText
             android:id="@+id/editTextProductDescription"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:hint="Product Description"
+            android:layout_height="50dp"
+            android:background="@drawable/edittextbackgroud"
             android:inputType="textMultiLine"/>
 
         <!-- Image Upload -->
@@ -73,11 +79,12 @@
             android:layout_height="200dp"
 
             />
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnUploadImage"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginTop="16dp"
+            android:background="@drawable/buttonbackground"
             android:text="select Image"/>
 
         <!-- Add more widgets as needed -->

@@ -1,4 +1,4 @@
-package com.example.witxsalon.ui.home;
+package com.example.rabbitmanagementsystem.ui.home;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.witxsalon.ui.home.HomeFragment"
+        android:name="com.example.rabbitmanagementsystem.ui.home.HomeFragment"
         android:label="Shop"
         tools:layout="@layout/fragment_home" />
 
-    <fragment
-        android:id="@+id/nav_sell"
-        android:name="com.example.witxsalon.ui.sell.SellFragment"
-        android:label="Admin"
-        tools:layout="@layout/fragment_sell" />
 
     <fragment
-        android:id="@+id/nav_appointments"
-        android:name="com.example.witxsalon.ui.appointments.Appointments"
-        android:label="Appointments"
-        tools:layout="@layout/fragment_appointments" />
+        android:id="@+id/nav_vet_services"
+        android:name="com.example.rabbitmanagementsystem.ui.VetServices.FragmentContactVet"
+        android:label="vet services"
+        tools:layout="@layout/fragment_vet_services" />
 
     <fragment
         android:id="@+id/nav_cart"
-        android:name="com.example.witxsalon.ui.cart.cartFragment"
+        android:name="com.example.rabbitmanagementsystem.ui.cart.cartFragment"
         android:label="cart"
         tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/nav_about_rabbits"
+        android:name="com.example.rabbitmanagementsystem.ui.AboutRabbits.FragmentRabbitDetails"
+        android:label="Rabbit's Info"
+        tools:layout="@layout/fragment_rabbit_details" />
 </navigation>

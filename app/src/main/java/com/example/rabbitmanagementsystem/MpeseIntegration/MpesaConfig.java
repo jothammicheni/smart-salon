@@ -1,4 +1,4 @@
-package com.example.witxsalon.MpeseIntegration;
+package com.example.rabbitmanagementsystem.MpeseIntegration;
 
 public class MpesaConfig {
     public static final String CONSUMER_KEY = "CpeQbK9e1ChSDAl1W5yc5dIelXfFMAlL";

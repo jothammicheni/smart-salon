@@ -1,4 +1,4 @@
-package com.example.witxsalon;
+package com.example.rabbitmanagementsystem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,24 +12,26 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.witxsalon.adminTasks.AddNewProduct;
-import com.example.witxsalon.adminTasks.AdminPanel;
+import com.example.rabbitmanagementsystem.adminTasks.AdminPanel;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
 
 public class login extends AppCompatActivity {
-TextView backToRegister,editEmail,editPassword;
+TextView editEmail,editPassword;
 ProgressBar setprogressBar;
+
+Button  btnToAdmin;
 Button  btnLogin;
 private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        backToRegister=findViewById(R.id.back_to_signup) ;
+        btnToAdmin=findViewById(R.id.back_to_signup) ;
         btnLogin =findViewById(R.id.btn_login);
         setprogressBar=findViewById(R.id.PBprogress);
         editPassword=findViewById(R.id.password);
@@ -39,18 +41,38 @@ private FirebaseAuth mAuth;
             @Override
             public void onClick(View view) {
 
-                //LoginUser();
-               Intent intent=new Intent(getApplicationContext(),MainActivity.class);
-               startActivity(intent);
+               LoginUser();
+//               Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+//               startActivity(intent);
 
 
             }
         });
-        backToRegister.setOnClickListener(new View.OnClickListener() {
+        btnToAdmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),Register.class);
-                startActivity(intent);
+                String email=editEmail.getText().toString().trim();
+                String password=editPassword.getText().toString().trim();
+
+                if(TextUtils.isEmpty(email)){
+                    Toast.makeText(login.this, "Enter valid email", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(TextUtils.isEmpty(password)){
+                    Toast.makeText(login.this, "Enter valid password", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(!TextUtils.isEmpty(email)&&email.equals("admin@gmail.com")&&password.equals("brian2372")){
+
+                    Intent intent=new Intent(getApplicationContext(), AdminPanel.class);
+                    startActivity(intent);
+                }else {
+                    Toast.makeText(login.this, "Admin Not found", Toast.LENGTH_SHORT).show();
+                }
+
+
+
+//
 
             }
         });
@@ -109,6 +131,12 @@ private FirebaseAuth mAuth;
                              Toast.makeText(login.this, errorCode, Toast.LENGTH_SHORT).show();
                              setprogressBar.setVisibility(View.GONE);
                          }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(login.this, "Login Failed try Again" + e, Toast.LENGTH_SHORT).show();
                     }
                 });
 

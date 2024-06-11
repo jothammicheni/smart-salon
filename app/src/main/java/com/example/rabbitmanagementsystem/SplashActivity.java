@@ -1,4 +1,4 @@
-package com.example.witxsalon;
+package com.example.rabbitmanagementsystem;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,8 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 import android.widget.Button;
-
-import com.example.witxsalon.adminTasks.AdminPanel;
 
 public class SplashActivity extends AppCompatActivity {
 

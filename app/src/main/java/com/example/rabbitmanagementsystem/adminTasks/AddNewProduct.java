@@ -1,10 +1,11 @@
-package com.example.witxsalon.adminTasks;
+package com.example.rabbitmanagementsystem.adminTasks;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -17,10 +18,13 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.witxsalon.R;
-import com.example.witxsalon.data.ProductInfo;
+import com.example.rabbitmanagementsystem.Chats.DisplayUsers;
+import com.example.rabbitmanagementsystem.R;
+import com.example.rabbitmanagementsystem.data.ProductInfo;
+import com.example.rabbitmanagementsystem.login;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -37,11 +41,12 @@ public class AddNewProduct extends AppCompatActivity implements AdapterView.OnIt
  ProgressBar progressBar;
  EditText itemName,itemDescription,itemPrice;
  ImageView imageView;
- String[] categories={"Long","short","Medium","yellow","Red","Brazilian"};
+ String[] categories={"FEEDS","HAY","WATERERS","CAGES","MEDICINE"};
  private Uri filePath;
  private ActivityResultLauncher<String>  pickImageLauncher;
  private final int PICK_IMAGE_REQUEST=22;
     FirebaseStorage storage;
+    TextView Tvback,Tvlogout;
     StorageReference storageReference;
     DatabaseReference databaseReference;
     @Override
@@ -57,6 +62,8 @@ public class AddNewProduct extends AppCompatActivity implements AdapterView.OnIt
         itemDescription=findViewById(R.id.editTextProductDescription);
         itemName=findViewById(R.id.editTextProductName);
         itemPrice=findViewById(R.id.editTextProductPrice);
+        Tvback=findViewById(R.id.TVback);
+        Tvlogout=findViewById(R.id.TVLogout);
 
 
         storage = FirebaseStorage.getInstance();
@@ -108,6 +115,28 @@ public class AddNewProduct extends AppCompatActivity implements AdapterView.OnIt
         btnSelectImage.setOnClickListener(view->Uploadmage());
         btnUploadProduct.setOnClickListener(View->uploadProductDetails());
 
+
+        Tvback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), AdminPanel.class);
+                startActivity(intent);
+            }
+        });
+
+        Tvlogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
+
+                FirebaseAuth.getInstance().signOut();
+                Intent intent=new Intent(getApplicationContext(), login.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
 
@@ -125,11 +154,12 @@ public class AddNewProduct extends AppCompatActivity implements AdapterView.OnIt
     public void Uploadmage(){
         FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
 
-        if(user!=null) {
+        //if(user!=null) {
+      //  if(user==null) {
             pickImageLauncher.launch("image/*");
-        }else{
-            Toast.makeText(this, "Login First", Toast.LENGTH_SHORT).show();
-        }
+//        }else{
+//            Toast.makeText(this, "Login First", Toast.LENGTH_SHORT).show();
+//        }
     }
 
     public void uploadProductDetails(){
@@ -138,7 +168,9 @@ public class AddNewProduct extends AppCompatActivity implements AdapterView.OnIt
 
         FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
 
-     if(user!=null) {
+
+        //if(user!=null) {
+//         if(user==null) {
          if (filePath != null) {
              String productId = UUID.randomUUID().toString().trim();
              String productName = itemName.getText().toString().trim();
@@ -186,16 +218,17 @@ public class AddNewProduct extends AppCompatActivity implements AdapterView.OnIt
 
          }
 
-     }else{
-         Toast.makeText(this, "Login First", Toast.LENGTH_SHORT).show();
-     }
+//     }
+//         else{
+//         Toast.makeText(this, "Login First", Toast.LENGTH_SHORT).show();
+//     }
 
 
 
     }
 
     private void ResetUI() {
-        imageView.setImageResource(0);
+      //  imageView.setImageResource(0);
         btnUploadProduct.setVisibility(View.GONE);
         btnSelectImage.setVisibility(View.VISIBLE);
         progressBar.setVisibility(View.GONE);

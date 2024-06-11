@@ -1,14 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.AboutRabbits.FragmentRabbitDetails">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/TVaboutrabbits"
+      android:text="Let Learn about rabbits"
+      android:layout_marginTop="20dp"
+      android:layout_marginBottom="10dp"
+      android:textColor="@color/status_bar_color"
+      android:textStyle="bold"
+      android:textAlignment="center"
+      android:textSize="20sp"
+      />
 
-</FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TVaboutrabbits"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+
+<!--rabitts informations-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="breeding information"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/teal_200"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:text="Breeding rabbits involves careful pairing of mature, healthy individuals in a stress-free environment. Introduce the male (buck) to the female (doe) gradually to gauge compatibility and minimize aggression. Once paired, monitor mating closely as rabbits are induced ovulators, meaning mating stimulates ovulation in the female. Provide the pregnant doe with a quiet, comfortable space as she nears her 31-day gestation period. Prepare a nesting box with soft bedding for her to deliver and nurse the kits (baby rabbits) once born. Monitor the kits' health closely and ensure they are nursed adequately until weaning at around 4-6 weeks old."
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:text="Maintain a responsible breeding schedule to give the doe ample time to recover between litters, typically allowing 1-2 months. Separate male and female kits promptly to prevent unintended breeding. Handling should be minimal during early stages to reduce stress and ensure the kits' development. Breeding rabbits successfully involves attention to these details, ensuring the health and welfare of both parents and offspring throughout the breeding cycle."
+                />
+<!---rabitts info            -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nutriation"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/teal_200"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:text="Proper nutrition is crucial for breeding rabbits to ensure their health and reproductive success. A balanced diet should consist primarily of high-quality hay, such as timothy or grass hay, which provides essential fiber for digestive health. Supplement this with fresh vegetables like leafy greens (e.g., kale, spinach), carrots, and herbs, but introduce new foods gradually to avoid digestive upset."
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:text="Additionally, pellets formulated specifically for rabbits provide essential vitamins, minerals, and protein. Offer these in moderation, as overfeeding can lead to obesity. Fresh, clean water should always be available, as dehydration can negatively impact fertility and overall health. Ensuring rabbits receive adequate nutrition supports reproductive function, gestation, and lactation, promoting healthy offspring and maintaining the well-being of breeding adults."
+                />
+
+            <!---rabitts info            -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BioSecurity"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/teal_200"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:text="Biosecurity is critical in rabbit breeding to safeguard against disease outbreaks and ensure the overall health of your rabbits. Establishing strict protocols such as quarantining new arrivals, monitoring daily for signs of illness, and maintaining clean and sanitized living conditions are fundamental practices. Controlling access to your rabbitry, including limiting visitors and enforcing hygiene measures, helps prevent the introduction and spread of pathogens. Additionally, maintaining clean feed and water sources, managing pests effectively, and promptly isolating any sick rabbits further enhance biosecurity. By prioritizing these measures, you create a safer environment for your rabbits, promoting their longevity, reproductive success, and overall well-being."
+                />
+
+            <!---rabitts info            -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Records Keeping"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/teal_200"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:text="Effective bookkeeping is essential for managing a successful rabbit breeding operation. It involves systematic recording and tracking of expenses, income, breeding records, and health information. Utilizing a dedicated ledger or digital spreadsheet, document costs such as feed, bedding, veterinary care, and equipment purchases. This helps track expenditures and analyze profitability over time. Record income from sales of rabbits, breeding services, or related products, ensuring accuracy and transparency in financial transactions."
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:text="Detailed breeding records are also crucial for bookkeeping. Document mating dates, pregnancy outcomes, litter sizes, and individual rabbit health profiles. This information not only aids in managing breeding schedules but also helps identify trends or issues affecting productivity. Regularly update and review these records to make informed decisions regarding breeding strategies, health management, and resource allocation. By maintaining organized and thorough bookkeeping practices, you can enhance efficiency, optimize resources, and ensure the financial health and sustainability of your rabbit breeding enterprise."
+                />
+
+
+            <!---rabitts info            -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="breeding information"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/teal_200"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:visibility="gone"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:text=""
+                android:visibility="gone"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:textAlignment="viewStart"
+                android:textSize="16sp"
+                android:text=""
+                android:visibility="gone"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:text="Learn More?"
+                android:background="@drawable/buttonbackground"
+                android:id="@+id/btnMore"
+
+                />
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -10,7 +10,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/screen_bg"
+        android:background="@color/background_color"
         android:gravity="center"
         android:id="@+id/RLadminLogin"
         >
@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Admin"
-                android:textColor="@color/white"
+                android:textColor="@color/status_bar_color"
                 android:layout_margin="20dp"
                 android:textSize="30dp"
                 android:textAlignment="center"
@@ -33,6 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/logo"
+                android:visibility="gone"
 
                 />
 
@@ -40,7 +41,8 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
-                android:background="@color/white"
+                android:background="@drawable/edittextbackgroud"
+
                 android:layout_marginTop="20sp"
                 android:hint="johndoe@gmail.com"
                 android:textAlignment="center"
@@ -50,7 +52,7 @@
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
-                android:background="@color/white"
+                android:background="@drawable/edittextbackgroud"
                 android:layout_marginTop="20sp"
                 android:hint="johndoe@gmail.com"
                 android:textAlignment="center"
@@ -64,12 +66,12 @@
                 android:orientation="vertical"
                 >
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_admin_login"
                     android:layout_width="fill_parent"
                     android:layout_height="50dp"
-                    android:backgroundTint="@color/black"
                     android:text="Login "
+                    android:background="@drawable/buttonbackground"
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     />

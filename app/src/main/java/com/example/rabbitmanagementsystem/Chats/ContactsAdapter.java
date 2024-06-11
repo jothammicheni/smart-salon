@@ -12,7 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.layersdiseasedetection.data.UserDetails;
+import com.example.rabbitmanagementsystem.R;
+import com.example.rabbitmanagementsystem.data.UserDetails;
 
 import java.util.List;
 

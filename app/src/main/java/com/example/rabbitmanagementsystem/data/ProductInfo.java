@@ -1,4 +1,4 @@
-package com.example.witxsalon.data;
+package com.example.rabbitmanagementsystem.data;
 
 import android.os.Parcel;
 import android.os.Parcelable;

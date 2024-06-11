@@ -5,125 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".adminTasks.AdminPanel">
+    tools:context=".adminTasks.AdminPanel"
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
+    >
 
-        android:orientation="vertical"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="fill_horizontal"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ADMIN PANEL"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_margin="10dp"
-                android:textAlignment="viewStart"
-                />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Logout"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_margin="10dp"
-                android:textAlignment="textEnd"
-                android:layout_marginEnd="10dp"
-                />
-        </LinearLayout>
-
-        <!--Adding new item layout-->
 
      <LinearLayout
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
-         android:padding="5dp"
-         android:layout_marginTop="70dp"
-         >
-         <LinearLayout
-             android:id="@+id/LLaddNewItem"
-             android:layout_width="0dp"
-             android:layout_height="wrap_content"
-             android:layout_weight="1"
-             android:padding="5dp"
-             android:gravity="center"
-             android:orientation="vertical"
-             >
-             <ImageView
-                 android:layout_width="100dp"
-                 android:layout_height="100dp"
-                 android:src="@mipmap/add_new_item_icon"
-                 />
-              <TextView
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="ADD ITEM"
-                  android:textAlignment="center"
-                  android:textColor="@color/purple_700"
-                  android:layout_margin="20dp"
-                  />
-         </LinearLayout>
-        <!-- Update the store -->
-         <LinearLayout
-             android:id="@+id/LLnewappointments"
-             android:layout_width="0dp"
-             android:layout_height="wrap_content"
-             android:layout_weight="1"
-             android:layout_marginLeft="10dp"
+         android:gravity="center"
+         android:layout_marginTop="30dp"
+         android:orientation="vertical"
+         tools:ignore="MissingConstraints">
 
-             android:gravity="center"
-             android:orientation="vertical"
-             >
-             <ImageView
-                 android:layout_width="100dp"
-                 android:layout_height="100dp"
-                 android:src="@mipmap/add_new_item_icon"
-                 />
-             <TextView
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:text="UPDATE ITEMS"
-                 android:textAlignment="center"
-                 android:textColor="@color/purple_700"
-                 android:layout_margin="20dp"
-                 />
-         </LinearLayout>
+         <androidx.appcompat.widget.AppCompatButton
+             android:layout_width="300dp"
+             android:layout_height="50dp"
+             android:background="@drawable/buttonbackground"
+             android:text="Register New Vet"
+             android:layout_marginTop="30dp"
+             android:id="@+id/btnNewVet"
 
-         <!-- Update the store -->
-         <LinearLayout
-             android:id="@+id/LLupdateStore"
-             android:layout_width="0dp"
-             android:layout_height="wrap_content"
-             android:layout_weight="1"
-             android:layout_marginLeft="10dp"
-             android:gravity="center"
-             android:orientation="vertical"
-             >
-             <ImageView
-                 android:layout_width="100dp"
-                 android:layout_height="100dp"
-                 android:src="@mipmap/add_new_item_icon"
-                 />
-             <TextView
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:text="UPDATE ITEMS"
-                 android:textAlignment="center"
-                 android:textColor="@color/purple_700"
-                 android:layout_margin="20dp"
-                 />
-         </LinearLayout>
+             />
+
+         <androidx.appcompat.widget.AppCompatButton
+             android:layout_width="300dp"
+             android:layout_height="50dp"
+             android:layout_marginTop="20dp"
+             android:background="@drawable/buttonbackground"
+             android:text="Register New Farmer"
+             android:id="@+id/btnNewfarmer"
+             />
+
+         <androidx.appcompat.widget.AppCompatButton
+             android:layout_width="300dp"
+             android:layout_height="50dp"
+             android:layout_marginTop="20dp"
+             android:background="@drawable/buttonbackground"
+             android:text="Add new items"
+             android:id="@+id/btnNewitems"
+             />
      </LinearLayout>
-
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

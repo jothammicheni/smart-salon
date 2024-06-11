@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "702569146656",
+    "firebase_url": "https://ecomerce-app-683a0-default-rtdb.firebaseio.com",
+    "project_id": "ecomerce-app-683a0",
+    "storage_bucket": "ecomerce-app-683a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702569146656:android:818a97944dcbed8e184f45",
+        "android_client_info": {
+          "package_name": "com.example.rabbitmanagementsystem"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC966W1SsKergr_ALdGrqUV267FdTW6WS4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

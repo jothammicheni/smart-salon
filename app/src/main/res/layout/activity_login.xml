@@ -9,12 +9,12 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
+        android:background="@color/background_color"
         android:gravity="center"
 
         >
         <LinearLayout
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Login here"
-                android:textColor="@color/black"
+                android:textColor="@color/status_bar_color"
                 android:layout_margin="20dp"
                 android:textSize="20dp"
                 android:textStyle="bold"
@@ -33,6 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/logo"
+                android:visibility="gone"
 
                 />
 
@@ -44,6 +45,7 @@
                 android:textColor="@color/black"
                 android:hint="johndoe@gmail.com"
                 android:inputType="textEmailAddress"
+                android:background="@drawable/edittextbackgroud"
                 android:textAlignment="center"
                 android:drawableStart="@drawable/signup_email_24"
                 />
@@ -54,6 +56,8 @@
                 android:textColor="@color/black"
                 android:inputType="textPassword"
                 android:layout_marginTop="20sp"
+                android:background="@drawable/edittextbackgroud"
+
                 android:hint="fg84hggrty34"
                 android:textAlignment="center"
                 android:drawableStart="@drawable/signup_password_24"
@@ -65,22 +69,24 @@
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal"
                 >
-                <TextView
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/back_to_signup"
-                    android:layout_width="wrap_content"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:text="Have account? sign up"
-                    android:textColor="@color/purple_700"
+                    android:text="Admin"
+                    android:textColor="@color/white"
+                    android:background="@drawable/buttonbackground"
                     android:layout_marginRight="10dp"
                     android:textStyle="bold"
+
                     />
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_login"
                     android:layout_width="fill_parent"
                     android:layout_height="50dp"
-                    android:backgroundTint="@color/purple_700"
                     android:text="Login"
                     android:textStyle="bold"
+                    android:background="@drawable/buttonbackground"
                     android:textColor="@color/white"
                     />
             </LinearLayout>

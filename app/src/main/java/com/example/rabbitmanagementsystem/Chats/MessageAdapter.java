@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.layersdiseasedetection.R;
+import com.example.rabbitmanagementsystem.R;
 import com.google.firebase.auth.FirebaseUser;
 
 import java.util.List;

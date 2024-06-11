@@ -5,11 +5,11 @@ id 'com.google.gms.google-services'
 }
 
 android {
-    namespace 'com.example.witxsalon'
+    namespace 'com.example.rabbitmanagementsystem'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.witxsalon"
+        applicationId "com.example.rabbitmanagementsystem"
         minSdk 24
         targetSdk 34
         versionCode 1

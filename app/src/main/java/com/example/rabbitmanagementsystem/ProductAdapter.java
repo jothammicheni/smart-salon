@@ -1,4 +1,4 @@
-package com.example.witxsalon;
+package com.example.rabbitmanagementsystem;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,22 +8,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.witxsalon.data.ProductInfo;
-import com.squareup.picasso.Picasso; // Import Picasso library for image loading
+import com.example.rabbitmanagementsystem.data.ProductInfo;
+import com.squareup.picasso.Picasso;
 import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
 
     private List<ProductInfo> productInfoList;
+    private OnItemClickListener onItemClickListener;
 
     public ProductAdapter(List<ProductInfo> productInfoList) {
         this.productInfoList = productInfoList;
     }
-
-
-    //initialize the click listener
-
-    private OnItemClickListener onItemClickListener;
 
     public interface OnItemClickListener {
         void onItemClick(ProductInfo productInfo);
@@ -32,7 +28,6 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     public void setOnItemClickListener(OnItemClickListener listener) {
         this.onItemClickListener = listener;
     }
-
 
     @NonNull
     @Override
@@ -45,15 +40,19 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ProductInfo productInfo = productInfoList.get(position);
 
-        // Load product image using Picasso
-        Picasso.get().load(productInfo.getImageUrl()).into(holder.productImageView);
+        // Load product image using Picasso with fit() and centerCrop()
+        Picasso.get()
+                .load(productInfo.getImageUrl())
+                .fit()
+                .centerCrop()
+                .into(holder.productImageView);
 
         holder.tvName.setText(productInfo.getProductName());
         holder.tvDescription.setText(productInfo.getProductDescription());
         holder.tvPrice.setText(productInfo.getProductPrice());
         holder.tvCategory.setText(productInfo.getProductCategory());
 
-        ////handle a single item click
+        // Handle item click
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,10 +62,11 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             }
         });
 
+        // Handle "View Item" button click
         holder.btnViewItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(onItemClickListener !=null){
+                if (onItemClickListener != null) {
                     onItemClickListener.onItemClick(productInfo);
                 }
             }
@@ -93,10 +93,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             tvDescription = itemView.findViewById(R.id.TVdescription);
             tvPrice = itemView.findViewById(R.id.TVprice);
             tvCategory = itemView.findViewById(R.id.TVcategory);
-          btnViewItem=itemView.findViewById(R.id.btnViewItem);
-
-
+            btnViewItem = itemView.findViewById(R.id.btnViewItem);
         }
     }
 }
-

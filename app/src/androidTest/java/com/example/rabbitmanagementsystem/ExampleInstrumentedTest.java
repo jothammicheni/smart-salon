@@ -1,4 +1,4 @@
-package com.example.witxsalon;
+package com.example.rabbitmanagementsystem;
 
 import android.content.Context;
 

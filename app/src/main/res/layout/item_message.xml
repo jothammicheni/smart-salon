@@ -17,7 +17,7 @@
         android:paddingTop="10dp"
         android:orientation="horizontal"
         android:id="@+id/LLMessageHolder"
-        android:background="@drawable/buttonbackgrouds"
+
 
 
         >
@@ -53,7 +53,6 @@
     <ImageButton
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@drawable/baseline_delete_24"
         android:id="@+id/btnDelChat"
         android:visibility="gone"
         />

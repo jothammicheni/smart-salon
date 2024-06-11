@@ -1,4 +1,4 @@
-package com.example.witxsalon.MpeseIntegration;
+package com.example.rabbitmanagementsystem.MpeseIntegration;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

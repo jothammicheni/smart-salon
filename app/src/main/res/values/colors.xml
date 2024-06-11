@@ -10,6 +10,11 @@
     <color name="screen_bg">#178E92</color>
     <color name="red">#ff0000</color>
     <color name="shandow">#ffe6e6</color>
+    <color name="green">#008000</color>
+    <color name="background_color">#F7E7CE</color>
+    <color name="status_bar_color"> #FB8C00</color>
+    <color name="image_carview_color">#F7E7CE</color>
+    #008000
     #ff0000
 
 </resources>

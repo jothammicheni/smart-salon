@@ -1,30 +1,21 @@
-package com.example.witxsalon.adminTasks;
+package com.example.rabbitmanagementsystem.adminTasks;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
-import androidx.core.view.WindowCompat;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.witxsalon.databinding.ActivityAdminPanelBinding;
-
-import com.example.witxsalon.R;
+import com.example.rabbitmanagementsystem.R;
+import com.example.rabbitmanagementsystem.Register;
+import com.example.rabbitmanagementsystem.RegisterVet;
 
 public class AdminPanel extends AppCompatActivity {
 
-   LinearLayout addNewItem;
-    LinearLayout viewAppointments;
-    LinearLayout updateItems;
+  Button btnNewfarmer,BtnnewVet,btnAddNewitems;
     LinearLayout viewOrders;
 
     @Override
@@ -32,12 +23,30 @@ public class AdminPanel extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_panel);
 
-        addNewItem=findViewById(R.id.LLaddNewItem);
+       btnNewfarmer=findViewById(R.id.btnNewfarmer);
+       btnAddNewitems=findViewById(R.id.btnNewitems);
+        BtnnewVet=findViewById(R.id.btnNewVet);
 
-        addNewItem.setOnClickListener(new View.OnClickListener() {
+        BtnnewVet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),AddNewProduct.class);
+                Intent intent=new Intent(getApplicationContext(),RegisterVet.class);
+                startActivity(intent);
+            }
+        });
+
+        btnAddNewitems.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), AddNewProduct.class);
+                startActivity(intent);
+            }
+        });
+
+        btnNewfarmer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), Register.class);
                 startActivity(intent);
             }
         });

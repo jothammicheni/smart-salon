@@ -18,8 +18,8 @@
 
     <ImageView
         android:id="@+id/productImageView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:scaleType="centerCrop"
 />
 
@@ -64,11 +64,11 @@
         android:textColor="@color/black"
         android:textAlignment="center" />
 
-       <Button
+       <androidx.appcompat.widget.AppCompatButton
            android:id="@+id/btnViewItem"
            android:layout_width="100dp"
            android:layout_height="50dp"
-           android:backgroundTint="@color/purple_700"
+           android:background="@drawable/buttonbackground"
            android:text="view"
 
            />

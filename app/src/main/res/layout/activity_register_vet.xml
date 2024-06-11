@@ -7,4 +7,194 @@
     android:layout_height="match_parent"
     tools:context=".RegisterVet">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--   adding the top navigation bar-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:background="@color/status_bar_color">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:drawableStart="@drawable/back_icon"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/TVback" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_marginRight="20dp"
+                android:textStyle="bold"
+                android:id="@+id/TVLogout" />
+
+        </LinearLayout>
+
+        <!--  Add edit texts      -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Register New Vet"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/status_bar_color"
+                    android:layout_marginBottom="10dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@color/image_carview_color"
+
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+                <EditText
+                    android:id="@+id/editUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edittextbackgroud"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:hint="John Doe" />
+
+                <EditText
+                    android:id="@+id/editEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittextbackgroud"
+
+                    android:hint="johndoe@gmail.com" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Farmer"
+                    android:id="@+id/spinnerCategory"
+                    android:textAlignment="center"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp" />
+
+
+                <EditText
+                    android:id="@+id/editPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittextbackgroud"
+                    android:inputType="number"
+                    android:hint="0728930152" />
+
+                <EditText
+                    android:id="@+id/editCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittextbackgroud"
+                    android:inputType="text"
+                    android:hint="Nairobi" />
+
+                <EditText
+                    android:id="@+id/editPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textAlignment="center"
+                    android:inputType="textPassword"
+                    android:background="@drawable/edittextbackgroud"
+                    android:layout_marginTop="10dp"
+                    android:hint="*yastgs783#" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Radio buttons for selecting user role -->
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center">
+
+                    <RadioButton
+                        android:id="@+id/radioFarmer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:text="FARMER" />
+
+                    <RadioButton
+                        android:id="@+id/radioVetOfficer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:text="VET OFFICER"
+                        android:layout_marginStart="20dp" />
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="ADD"
+                        android:background="@drawable/buttonbackground"
+                        android:textStyle="bold"
+                        android:id="@+id/btnSignUp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:visibility="gone"
+                android:id="@+id/progress" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

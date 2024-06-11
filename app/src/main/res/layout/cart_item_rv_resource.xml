@@ -63,10 +63,10 @@
                 android:textAlignment="center"
                 android:gravity="center">
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:backgroundTint="@color/purple_700"
+                    android:background="@drawable/buttonbackground"
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     android:text="-" />
@@ -80,10 +80,10 @@
                     android:textAlignment="center"
                     android:text="1" />
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:backgroundTint="@color/purple_700"
+                    android:background="@drawable/buttonbackground"
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     android:text="*" />
@@ -99,7 +99,7 @@
                 android:textColor="@color/black"
                 android:textAlignment="center" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnDel"
                 android:layout_width="70dp"
                 android:layout_height="50dp"
